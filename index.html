@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Trang Tuyển Dụng</title>
+    
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav>
+        <ul>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#jobs">Việc làm</a></li>
+            <li><a href="#apply">Ứng tuyển</a></li>
+            <li><a href="#login" >Đăng nhập</a></li>
+        </ul>
+        <div class="search-bar-container">
+            <div class="search-bar" id="searchBar">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm..." onfocus="expandSearchBar()" onblur="shrinkSearchBar()">
+                <button onclick="searchFunction()">🔍</button>
+            </div>
+        </div>
+        
+    </nav>
+
+    <!-- Phần trang chủ -->
+    <section id="home">
+        <h1>TỰ HÀO LÀ NỀN TẢNG TUYỂN DỤNG UY TÍN CỦA VIỆT NAM </h1>
+        <div id="content">
+            <p>Chào mừng bạn đến với ITVN - nền tảng tuyển dụng uy tín và chuyên nghiệp! Chúng tôi kết nối ứng viên tiềm năng với những cơ hội nghề nghiệp hàng đầu từ các doanh nghiệp đáng tin cậy. Tại ITVN không chỉ tìm thấy những công việc phù hợp mà còn có thể khám phá các bài viết hướng nghiệp, mẹo phỏng vấn và xây dựng hồ sơ ấn tượng. Với giao diện dễ sử dụng, ITVN giúp bạn nhanh chóng tìm kiếm và ứng tuyển các vị trí mơ ước, biến đam mê thành sự nghiệp. Hãy gia nhập cộng đồng của chúng tôi và mở ra hành trình nghề nghiệp mới ngay hôm nay<p>
+            <div id="moreContent" style="display: none;">
+              <p>Tại sao nên chọn ITVN cho sự nghiệp IT của bạn? ITVN là nền tảng tuyển dụng chuyên biệt dành cho lĩnh vực công nghệ thông tin, nơi hội tụ những cơ hội việc làm hàng đầu từ các công ty công nghệ hàng đầu Việt Nam. Với ITVN, bạn không chỉ tìm kiếm được vị trí phù hợp mà còn dễ dàng kết nối với các nhà tuyển dụng trong ngành IT qua quy trình ứng tuyển nhanh chóng, thuận tiện. Chúng tôi hiểu rõ những gì ứng viên công nghệ cần, từ môi trường làm việc hiện đại, thử thách chuyên môn đến cơ hội phát triển kỹ năng mới. ITVN cam kết mang đến trải nghiệm tốt nhất và giúp bạn mở ra những cánh cửa sự nghiệp đam mê và tiềm năng trong ngành công nghệ.".</p>
+             
+            </div>
+            <button onclick="toggleContent()" id="toggleButton">Xem thêm</button>
+          </div>
+          
+        
+    </section>
+
+    <!-- Phần danh sách công việc -->
+    <section id="jobs">
+        <h2>Các công việc đang tuyển dụng</h2>
+        <div class="job-container">
+            <div class="job">
+                <h3>Lập trình viên Frontend</h3>
+                <p>Địa điểm: Hà Nội</p>
+                <p><strong>Mức lương:</strong> 10-20 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Xây dựng và duy trì giao diện người dùng cho các ứng dụng web, đảm bảo tính tương thích trên nhiều trình duyệt và thiết bị khác nhau.</p>
+                <img src="company-logo.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Lập trình viên Frontend')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Lập trình viên Backend</h3>
+                <p>Địa điểm: Hồ Chí Minh</p>
+                <p><strong>Mức lương:</strong> 15-25 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Phát triển hệ thống máy chủ và API cho các ứng dụng, đảm bảo hiệu suất và tính bảo mật của hệ thống.</p>
+                <img src="company-logo.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Lập trình viên Backend')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Quản trị hệ thống</h3>
+                <p>Địa điểm: Đà Nẵng</p>
+                <p><strong>Mức lương:</strong> 12-18 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Quản lý và duy trì hệ thống máy chủ, mạng, bảo mật và các phần mềm của công ty.</p>
+                <img src="company-logo.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Quản trị hệ thống')">Ứng tuyển</button>
+            </div>
+            <div class="job">
+                <h3>Chuyên viên an ninh mạng</h3>
+                <p>Địa điểm: Hà Nội</p>
+                <p><strong>Mức lương:</strong> 15-25 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Giám sát, bảo vệ hệ thống mạng và dữ liệu công ty khỏi các mối đe dọa từ bên ngoài. Phân tích và ứng phó với các sự cố an ninh mạng.</p>
+                <img src="company-logo1.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Chuyên viên an ninh mạng')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Lập trình viên Mobile</h3>
+                <p>Địa điểm: Hồ Chí Minh</p>
+                <p><strong>Mức lương:</strong> 12-20 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Phát triển và bảo trì ứng dụng di động cho các nền tảng Android và iOS. Đảm bảo hiệu suất và tính ổn định của ứng dụng.</p>
+                <img src="company-logo2.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Lập trình viên Mobile')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Data Analyst</h3>
+                <p>Địa điểm: Hà Nội</p>
+                <p><strong>Mức lương:</strong> 14-22 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Thu thập, phân tích và trực quan hóa dữ liệu để cung cấp thông tin quan trọng cho các quyết định chiến lược của công ty.</p>
+                <img src="company-logo3.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Data Analyst')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Quản lý dự án IT</h3>
+                <p>Địa điểm: Đà Nẵng</p>
+                <p><strong>Mức lương:</strong> 18-30 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Quản lý, giám sát và điều phối các dự án công nghệ thông tin, đảm bảo các dự án hoàn thành đúng hạn và đúng ngân sách.</p>
+                <img src="company-logo4.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Quản lý dự án IT')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>DevOps Engineer</h3>
+                <p>Địa điểm: Hồ Chí Minh</p>
+                <p><strong>Mức lương:</strong> 20-35 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Xây dựng và duy trì các hệ thống tự động hóa quy trình phát triển phần mềm, quản lý cơ sở hạ tầng và triển khai ứng dụng.</p>
+                <img src="company-logo5.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('DevOps Engineer')">Ứng tuyển</button>
+            </div>
+            <div class="job">
+                <h3>UI/UX Designer</h3>
+                <p>Địa điểm: Hà Nội</p>
+                <p><strong>Mức lương:</strong> 12-18 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Thiết kế giao diện người dùng đẹp mắt, dễ sử dụng, tập trung vào trải nghiệm người dùng cho các sản phẩm phần mềm và ứng dụng web.</p>
+                <img src="company-logo1.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('UI/UX Designer')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>AI Engineer</h3>
+                <p>Địa điểm: Hồ Chí Minh</p>
+                <p><strong>Mức lương:</strong> 20-40 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Phát triển các mô hình AI, học máy, và các giải pháp tự động hóa để cải thiện hiệu suất và hiệu quả của sản phẩm và dịch vụ.</p>
+                <img src="company-logo2.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('AI Engineer')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Blockchain Developer</h3>
+                <p>Địa điểm: Hà Nội</p>
+                <p><strong>Mức lương:</strong> 25-45 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Phát triển và triển khai các ứng dụng blockchain, đảm bảo tính bảo mật và hiệu quả của các hệ thống phân tán.</p>
+                <img src="company-logo3.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Blockchain Developer')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Cloud Engineer</h3>
+                <p>Địa điểm: Đà Nẵng</p>
+                <p><strong>Mức lương:</strong> 18-35 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Thiết kế, triển khai và duy trì các giải pháp hạ tầng đám mây, đảm bảo tính sẵn sàng và bảo mật của hệ thống đám mây.</p>
+                <img src="company-logo4.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Cloud Engineer')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>System Analyst</h3>
+                <p>Địa điểm: Hồ Chí Minh</p>
+                <p><strong>Mức lương:</strong> 18-28 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Phân tích yêu cầu hệ thống, thiết kế các giải pháp phần mềm hiệu quả và làm cầu nối giữa các bộ phận kỹ thuật và phi kỹ thuật.</p>
+                <img src="company-logo5.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('System Analyst')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Software Engineer</h3>
+                <p>Địa điểm: Hà Nội</p>
+                <p><strong>Mức lương:</strong> 18-30 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Phát triển và duy trì các ứng dụng phần mềm cho các nền tảng web và di động. Cải tiến hiệu suất và tính năng của ứng dụng.</p>
+                <img src="company-logo6.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Software Engineer')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Database Administrator</h3>
+                <p>Địa điểm: Hồ Chí Minh</p>
+                <p><strong>Mức lương:</strong> 20-35 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Quản lý và duy trì cơ sở dữ liệu của công ty, đảm bảo tính toàn vẹn và bảo mật của dữ liệu.</p>
+                <img src="company-logo7.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Database Administrator')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Web Developer</h3>
+                <p>Địa điểm: Đà Nẵng</p>
+                <p><strong>Mức lương:</strong> 15-25 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Phát triển và duy trì các ứng dụng web, đảm bảo giao diện người dùng mượt mà và khả năng tương thích trên các trình duyệt khác nhau.</p>
+                <img src="company-logo8.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Web Developer')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Game Developer</h3>
+                <p>Địa điểm: Hà Nội</p>
+                <p><strong>Mức lương:</strong> 20-40 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Phát triển và tối ưu hóa các trò chơi điện tử cho nhiều nền tảng, cải thiện trải nghiệm người chơi.</p>
+                <img src="company-logo9.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Game Developer')">Ứng tuyển</button>
+            </div>
+            <div class="job">
+                <h3>Quality Assurance Tester</h3>
+                <p>Địa điểm: Hồ Chí Minh</p>
+                <p><strong>Mức lương:</strong> 12-20 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Kiểm tra chất lượng phần mềm, phát hiện lỗi và đảm bảo sản phẩm đáp ứng tiêu chuẩn chất lượng trước khi phát hành.</p>
+                <img src="company-logo1.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Quality Assurance Tester')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>IT Support Specialist</h3>
+                <p>Địa điểm: Hà Nội</p>
+                <p><strong>Mức lương:</strong> 10-18 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Hỗ trợ kỹ thuật cho người dùng, xử lý sự cố phần mềm và phần cứng, bảo trì hệ thống máy tính và mạng nội bộ.</p>
+                <img src="company-logo2.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('IT Support Specialist')">Ứng tuyển</button>
+            </div>
+        
+            <div class="job">
+                <h3>Network Engineer</h3>
+                <p>Địa điểm: Đà Nẵng</p>
+                <p><strong>Mức lương:</strong> 15-25 triệu VND</p>
+                <p><strong>Mô tả công việc:</strong> Thiết kế, triển khai và duy trì hạ tầng mạng, đảm bảo kết nối mạng ổn định và bảo mật cho công ty.</p>
+                <img src="company-logo3.jpg" alt="Logo Công ty" class="company-logo">
+                <button onclick="apply('Network Engineer')">Ứng tuyển</button>
+            </div>
+            
+        </div>
+        
+        
+            
+        
+    </section>
+
+    <!-- Phần form ứng tuyển -->
+    <section id="apply">
+        <h2>Ứng tuyển vào vị trí</h2>
+        <form id="applicationForm">
+            <label for="jobTitle">Tên công việc:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required readonly>
+
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+           
+            <label for="birthdate">Ngày tháng năm sinh:</label>
+            <input type="date" id="birthdate" name="birthdate">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="resume">Hồ sơ cá nhân (CV):</label>
+            <input type="file" id="resume" name="resume" required>
+
+            <button type="submit">Gửi hồ sơ</button>
+        </form>
+    </section>
+
+    <!-- Phần đăng nhập -->
+    <section id="login">
+        <div class="container">
+            <div class="login-section">
+                <h2>Đăng nhập</h2>
+                <div class="social-icons">
+                    <button class="social-btn fb">f</button>
+                    <button class="social-btn gg">G+</button>
+                </div>
+                <form>
+                    <input type="text" placeholder="Tên người dùng" required>
+                    <input type="password" placeholder="Mật khẩu" required>
+                    <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                    <button type="submit" class="login-btn">Đăng nhập</button>
+                </form>
+            </div>
+            <div class="signup-section">
+                <h2>Chào bạn!</h2>
+                <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
+                <button class="signup-btn">Đăng ký</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script> 
+    <script src="js/app.js"></script> <!-- Kết nối JavaScript -->
+</body>
+</html>
+
